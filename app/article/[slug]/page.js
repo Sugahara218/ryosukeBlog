@@ -61,16 +61,16 @@ export default async function Page({ params }) {
 //   };
 // };
 
-// export const getStaticProps = async (context) => {
-//   const { slug } = context.params;
-//   const page = await getPage(id);
-//   const blocks = await getBlocks(id);
+export const getStaticProps = async (context) => {
+  const { slug } = context.params;
+  const page = await getPage(id);
+  const blocks = await getBlocks(id);
 
-//   return {
-//     props: {
-//       page,
-//       blocks,
-//     },
-//     revalidate: 1,
-//   };
-// };
+  return {
+    props: {
+      page,
+      blocks,
+    },
+    revalidate: 1,
+  };
+};
